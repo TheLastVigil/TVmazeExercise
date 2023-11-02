@@ -1,0 +1,535 @@
+/* ---------------- VARS ---------------- */
+/* NICE */
+/* :root {
+  --debug: 5px;
+} */
+/* ---------------- CSS RESET ---------------- */
+/* NICE */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* NICE */
+ul {
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+/* ---------------- GENERAL ---------------- */
+/* NICE */
+a {
+  cursor: pointer;
+  color: white;
+}
+.row {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+/* ---------------- SECTIONS ---------------- */
+/* NICE */
+section {
+  width: 70%;
+  margin-inline: auto;
+  outline: var(--debug) solid red;
+}
+/* NICE */
+.topHeaderSection {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 60% 15%;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+/* NICE */
+.topHeaderSection > nav > ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  outline: var(--debug) solid red;
+}
+/* NICE */
+.topHeaderSection > nav > ul > li > a:hover {
+  color: #3c948b;
+}
+.bottomHeaderSection {
+  height: 100%;
+  outline: var(--debug) solid red;
+}
+.bottomHeaderSection > nav {
+  height: 100%;
+  outline: var(--debug) solid red;
+}
+.bottomHeaderSection > nav > ul {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  outline: var(--debug) solid red;
+}
+.bottomHeaderSection > nav > ul > li {
+  height: 100%;
+  outline: var(--debug) solid red;
+}
+.bottomHeaderSection > nav > ul > li > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-inline: 1rem;
+  outline: var(--debug) solid red;
+}
+.bottomHeaderSection > nav > ul > li > a:hover {
+  background-color: #3f3f3f;
+}
+/* ---------------- HEADER ---------------- */
+/* NICE */
+.topHeaderSectionContainer {
+  background-color: #3f3f3f;
+}
+/* NICE */
+.bottomHeaderSectionContainer {
+  height: 2rem;
+  background-color: #3c948b;
+}
+/* NICE */
+.topHeaderSection > img {
+  width: 10rem;
+  outline: var(--debug) solid red;
+}
+/* ---------------- SEARCH ---------------- */
+.searchContainer {
+  display: flex;
+  outline: var(--debug) solid red;
+}
+.searchContainer > .searchButton {
+  border-radius: 0 2rem 2rem 0;
+  background-color: #3c948b;
+  color: #fff;
+  border: none;
+  height: 2.6rem;
+  padding: 0.9rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.25s ease-out;
+}
+.searchContainer > .searchButton:hover {
+  background: #71c5bd;
+}
+.searchContainer > input {
+  border: 1px solid #cacaca;
+  border-radius: 2rem 0 0 2rem;
+  width: 100%;
+  height: 2.6rem;
+  padding: 0.5rem;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  font-family: open sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0a0a0a;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+.searchContainer > input:focus {
+  box-shadow: 0 0 5px #cacaca;
+  outline: none;
+}
+.searchContainer > input::placeholder {
+  color: #cacaca;
+}
+/* ---------------- MAIN ---------------- */
+main > section {
+  display: grid;
+  gap: 1rem;
+  justify-content: space-between;
+  grid-template-columns: 75% 20%;
+}
+main button {
+  padding: 0.9rem 1rem;
+  background: white;
+  color: #3c948b;
+  border: #3c948b solid 1px;
+  border-radius: 1000px;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+main button:hover {
+  background: #3c948b;
+  color: white;
+}
+.sideSection > div > .recentlyAddedShowsWrapper {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1rem;
+  outline: var(--debug) solid red;
+}
+.sideSection > div > .recentlyAddedShowsWrapper > .container {
+  display: flex;
+}
+.sideSection > div > .recentlyAddedShowsWrapper > .container > div > p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.sideSection > div > .recentlyAddedShowsWrapper > .container > div > b,
+.sideSection > div > .recentlyAddedShowsWrapper > .container > div > p > a {
+  color: #3c948b;
+}
+.sideSection > div > .recentlyAddedShowsWrapper > .container > img {
+  width: 4rem;
+  height: 6rem;
+}
+
+.mainSection > .movieWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.1rem;
+  outline: var(--debug) solid red;
+}
+.mainSection > .movieWrapper > .container {
+  display: flex;
+  flex-direction: column;
+}
+.mainSection > .movieWrapper > .container > div {
+  background: #1f4b47;
+  color: white;
+  padding: 1rem;
+  border-bottom: solid 3px #3c948b;
+  height: 40%;
+}
+.mainSection > .movieWrapper > .container > div > p {
+  font-size: 0.8rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.mainSection > .movieWrapper > .container > img {
+  width: 100%;
+  height: 60%;
+}
+.blogsArticlesNewsSection > .blogsArticlesNewsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blogsArticlesNewsSection > .blogsArticlesNewsWrapper > .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 6rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.blogsArticlesNewsSection > .blogsArticlesNewsWrapper > .container > img {
+  width: 4rem;
+  height: 6rem;
+}
+.blogsArticlesNewsSection > .blogsArticlesNewsWrapper > .container > div > h2 {
+  color: #3c948b;
+}
+.blogsArticlesNewsSection > .blogsArticlesNewsWrapper > .container > div > h6 {
+  color: #808997;
+}
+/* ---------------- ABOUT PANEL ---------------- */
+.aboutPanel {
+  grid-column: span 2;
+  background-color: #f0f9f8;
+  border-color: #b9e3de;
+  color: #3c948b;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.aboutPanel > .aboutPanelWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+}
+.aboutPanel > .aboutPanelWrapper > .container {
+  display: flex;
+  gap: 1rem;
+}
+.aboutPanel > .aboutPanelWrapper > .container > figure {
+  width: 5rem;
+  height: 5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.aboutPanel > .aboutPanelWrapper > .container > article > h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.aboutPanel > .row > .column > h2,
+.aboutPanel > .row > .column > h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.aboutPanel > .row > img {
+  width: 80px;
+  height: 80px;
+}
+.aboutPanel > .row > .column {
+  justify-content: center;
+}
+.aboutPanel > .row {
+  gap: 1rem;
+}
+/* ---------------- AROUND THE WEB ---------------- */
+.aroundTheWeb {
+  grid-column: span 2;
+  padding: 1rem;
+}
+.aroundTheWeb > .aroundTheWebWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container {
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container > span {
+  content: "X";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+  color: white;
+  padding: 0.2rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container > span:hover {
+  background: red;
+  text-decoration: underline;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container:hover > img {
+  opacity: 0.75;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container:hover > h4 {
+  text-decoration: underline;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container > img {
+  width: 100%;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container > div {
+  text-align: center;
+  color: #999;
+}
+.aroundTheWeb > .aroundTheWebWrapper > .container > h4 {
+  color: #3c948b;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.aroundTheWeb > .row {
+  justify-content: space-between;
+  align-items: center;
+}
+.aroundTheWeb > .row > img {
+  width: 32px;
+  height: 30px;
+  margin-right: 1rem;
+}
+.aroundTheWeb > .row > h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 30px;
+  color: #0a0a0a;
+  font-weight: 300;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+/* ---------------- FOOTER ---------------- */
+footer > section {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+  border-top: 1px solid #cacaca;
+}
+footer > section > div {
+  display: flex;
+  flex-direction: column;
+}
+footer > section p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+footer > section > div > div {
+  display: flex;
+  gap: 0.2rem;
+}
+footer > section > div > div > nav > ul {
+  display: flex;
+  gap: 0.2rem;
+}
+footer > section > div > div > nav > ul > li > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+footer > section > div > div > nav > ul > li:hover > img {
+  opacity: 0.75;
+  cursor: pointer;
+}
+footer > section > nav > ul {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+footer > section > nav > ul > li > a {
+  color: #347f78;
+}
+footer > section > nav > ul:nth-child(1) {
+  font-size: 1.25em;
+}
+/* ---------------- TABLE ---------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #f1f1f1;
+}
+table > tbody > tr > th {
+  background-color: #3f3f3f;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  height: 2rem;
+  padding: 0.5rem;
+}
+table > tbody > tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+table > tbody > tr > td > a,
+table > tbody > tr > td > i {
+  color: #0000ee;
+}
+table > tbody > tr > td {
+  padding: 0.5rem;
+  height: 3rem;
+}
+table > tbody > tr > td > p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+table > tbody > tr > td:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* ---------------- MEDIA QUERIES ---------------- */
+@media only screen and (max-width: 1300px) {
+  .sideSection > div > .recentlyAddedShowsWrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .aboutPanel {
+    grid-column: span 1;
+  }
+  .aroundTheWeb {
+    grid-column: span 1;
+  }
+  main > section {
+    grid-template-columns: 1fr;
+  }
+  .topHeaderSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .topHeaderSection > nav > ul {
+    grid-row: 1;
+  }
+  .bottomHeaderSection > nav > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bottomHeaderSectionContainer {
+    height: 9rem;
+  }
+  .aroundTheWeb > .aroundTheWebWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .aboutPanel > .aboutPanelWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainSection > .movieWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mainSection > .movieWrapper > .container:nth-child(3) {
+    grid-row: span 2;
+  }
+  .mainSection > .movieWrapper > .container:nth-child(3) > div {
+    height: 50%;
+  }
+  .mainSection > .movieWrapper > .container:nth-child(3) > img {
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  footer > section > div > div {
+    flex-direction: column;
+  }
+  footer > section > nav {
+    display: flex;
+    gap: 1rem;
+  }
+  footer > section > nav > ul {
+    justify-content: start;
+    flex-direction: column;
+  }
+  footer > section > nav > ul:nth-child(1) {
+    font-size: 1rem;
+  }
+  footer > section > nav > ul:nth-child(2) {
+    font-size: 0.75em;
+  }
+  .aroundTheWeb > .aroundTheWebWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutPanel > .aboutPanelWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mainSection > .movieWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainSection > .movieWrapper > .container:nth-child(3) {
+    grid-row: span 1;
+  }
+  .mainSection > .movieWrapper > .container:nth-child(3) > div {
+    height: 40%;
+  }
+  .mainSection > .movieWrapper > .container:nth-child(3) > img {
+    height: 60%;
+  }
+  .mainSection > .movieWrapper > .container:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 700px) {
+  section {
+    width: 90%;
+  }
+  .mainSection > .movieWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mainSection > .movieWrapper > .container:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+@media only screen and (max-width: 500px) {
+  section {
+    width: 100%;
+  }
+  footer > section {
+    width: 90%;
+  }
+}
